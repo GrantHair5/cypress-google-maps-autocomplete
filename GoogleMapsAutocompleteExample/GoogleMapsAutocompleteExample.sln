@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMapsAutocompleteExample", "GoogleMapsAutocompleteExample\GoogleMapsAutocompleteExample.csproj", "{212F13FE-FBA1-4100-9856-9BD26E06FC32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{212F13FE-FBA1-4100-9856-9BD26E06FC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212F13FE-FBA1-4100-9856-9BD26E06FC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212F13FE-FBA1-4100-9856-9BD26E06FC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212F13FE-FBA1-4100-9856-9BD26E06FC32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E05A8FC8-21D3-41C3-9FE8-A3298AE57C84}
+	EndGlobalSection
+EndGlobal
