@@ -4,7 +4,48 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+
+<form>
+    <div class="form-group">
+        <label for="locationInput">Enter Location</label>
+        <input type="text" class="form-control" id="locationInput" placeholder="Enter your postcode, town or city" data-cy="enterLocationInput"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    const locationInput = document.getElementById("locationInput");
+    const ENTER_KEY = 13;
+
+    const GOOGLE_PLACES_AUTOCOMPLETE_OPTIONS = {
+        componentRestrictions: { country: "GB" },
+        types: ["geocode"]
+    };
+
+    const { maps } = window.google;
+
+    const autocomplete = new maps.places.Autocomplete(
+        locationInput,
+        GOOGLE_PLACES_AUTOCOMPLETE_OPTIONS
+    );
+    
+
+    maps.event.addDomListener(
+        locationInput,
+        "keydown",
+        e => event.keyCode === ENTER_KEY && e.preventDefault()
+    );
+
+    autocomplete.addListener("place_changed",
+        () => {
+            var place = autocomplete.getPlace();
+            const lat = place.geometry.location.lat();
+            const lng = place.geometry.location.lng();
+            console.log(lat);
+            console.log(lng);
+        });
+
+
+</script>
