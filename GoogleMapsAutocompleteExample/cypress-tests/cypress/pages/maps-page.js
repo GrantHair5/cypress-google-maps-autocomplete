@@ -17,7 +17,7 @@ const branchPage = {
       cy.enterText(enterLocationInput, '{downarrow}');
       cy.enterText(enterLocationInput, '{enter}');
       cy.get('[data-cy=lat]', { timeout: 10000 }).should('be.visible').assertElementContainsText(value.dumfriesLat);
-      cy.get('[data-cy=lng]', { timeout: 10000 }).should('be.visible').assertElementContainsText(value.dumfriesLng);
+      cy.get('[data-cy=lng]', { timeout: 10000 }).should('be.visible').assertElementContainsText(value.dumfriesLong);
     }
   };
 
