@@ -5,12 +5,12 @@
 }
 
 <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=@Model.GmapsApiKey&libraries=places"></script>
 
 <form>
     <div class="form-group">
         <label for="locationInput">Enter Location</label>
-        <input type="text" class="form-control" id="locationInput" placeholder="Enter your postcode, town or city" data-cy="enterLocationInput"/>
+        <input type="text" class="form-control" id="locationInput" placeholder="Enter your postcode, town or city" data-cy="enterLocationInput" />
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
@@ -30,7 +30,6 @@
         locationInput,
         GOOGLE_PLACES_AUTOCOMPLETE_OPTIONS
     );
-    
 
     maps.event.addDomListener(
         locationInput,
@@ -46,6 +45,4 @@
             console.log(lat);
             console.log(lng);
         });
-
-
 </script>

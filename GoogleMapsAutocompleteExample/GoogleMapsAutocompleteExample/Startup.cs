@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GoogleMapsAutocompleteExample.Config;
 
 namespace GoogleMapsAutocompleteExample
 {
@@ -24,6 +25,8 @@ namespace GoogleMapsAutocompleteExample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.Configure<GmapsApiSecrets>(Configuration.GetSection(nameof(GmapsApiSecrets)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
