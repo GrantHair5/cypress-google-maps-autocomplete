@@ -12,11 +12,15 @@
         <label for="locationInput">Enter Location</label>
         <input type="text" class="form-control" id="locationInput" placeholder="Enter your postcode, town or city" data-cy="enterLocationInput" />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<input type="text" data-cy="lat" id="lat" class="form-control"  placeholder="Latitude"/>
+<input type="text" data-cy="lng" id="lng" class="form-control" placeholder="Longitude"/>
 
 <script>
     const locationInput = document.getElementById("locationInput");
+    const latInput = document.getElementById("lat");
+    const lngInput = document.getElementById("lng");
     const ENTER_KEY = 13;
 
     const GOOGLE_PLACES_AUTOCOMPLETE_OPTIONS = {
@@ -42,7 +46,7 @@
             var place = autocomplete.getPlace();
             const lat = place.geometry.location.lat();
             const lng = place.geometry.location.lng();
-            console.log(lat);
-            console.log(lng);
+            latInput.value = lat;
+            lngInput.value = lng;
         });
 </script>
